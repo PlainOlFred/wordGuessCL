@@ -1,6 +1,6 @@
 
 const 
-  letter = require('./word')
+  letter = require('./letter')
 
 Word = function () {
 
