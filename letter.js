@@ -1,29 +1,36 @@
+
 // Letter.js` *should not* `require` any other files.
+
 
 Letter = function () {
 
-  this.blank = '?';
-  this.isUsed = false;
+  this.letter = 'a';
+  this.isGuessed = false;
 
 
-  this.guess = () => {
+  this.check = () => {
 
-    if(guess) {
-      return 'letter'
+    if(this.isGuessed) {
+      return this.letter;
     } else {
-      return this.blank;
+      return '_';
     }
 
-  };
+  }
 
-  this.check = (char) => {
+  this.guess = (char) => {
 
-    
-
+    if(char === this.letter) {
+      this.isGuessed = true;
+    }
   }
 
 }
 
 
 let letter = new Letter;
-module.exports = letter;
+letter.guess('a');
+console.log(letter.isGuessed)
+
+
+module.exports = Letter;
