@@ -2,20 +2,19 @@
 // Letter.js` *should not* `require` any other files.
 
 
-Letter = function () {
+const Letter = function () {
 
   this.letter = 'a';
   this.isGuessed = false;
 
 
-  this.check = () => {
-
+  this.toString = () => {
+    
     if(this.isGuessed) {
       return this.letter;
     } else {
       return '_';
     }
-
   }
 
   this.guess = (char) => {
@@ -30,6 +29,7 @@ Letter = function () {
 
 let letter = new Letter;
 letter.guess('a');
+
 console.log(letter.isGuessed)
 
 

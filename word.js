@@ -1,27 +1,20 @@
 
 const 
-  letter = require('./word')
+  letter = require('./letter')
+  
 
-Word = function () {
+const Word = function(arr) {
 
+  this.currentWord = arr.map(element => (new letter(element)).toString()).join(' ');
+  console.log(this.currentWord)
 
-  this.word = function () {
-    return letter.guess
-  }
-
-  this.word2 = function (char) {
-    call(letter.check(char))
-
+  this.check = function(char) {
+    letter.guess.call(this, char)
     
-     return 
   }
-
 
 
 
 
 }
 
-
-let word = new Word;
-module.exports = word;
