@@ -30,4 +30,5 @@ let letter = new Letter;
 letter.guess('a');
 console.log(letter.isGuessed)
 
-module.exports = letter;
+
+module.exports = Letter;
