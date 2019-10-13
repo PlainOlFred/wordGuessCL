@@ -1,4 +1,6 @@
-//git
+
+// Letter.js` *should not* `require` any other files.
+
 
 Letter = function () {
 
